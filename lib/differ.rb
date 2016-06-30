@@ -1,5 +1,11 @@
 require "differ/version"
 
 module Differ
-  # Your code goes here...
+  require "differ/diff_service"
+
+  def self.diff(fpath1, fpath2)
+    service = DiffService.new fpath1, fpath2
+
+    service.call
+  end
 end

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "differ"
+
+puts Differ.diff ENV['FILE1'], ENV['FILE2']
